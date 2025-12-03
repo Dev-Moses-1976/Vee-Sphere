@@ -1,0 +1,480 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --base: #555;
+  --base-100: #f1f1f1;
+  --base-400: #555;
+  --base-800: #000;
+  --yellow: #ffda4b;
+  --yellow-100: #fffbe6;
+  --yellow-400: #ffda4b;
+  --yellow-800: #8b6f00;
+  --blue: #0a61ae;
+  --blue-100: #e2f8ff;
+  --blue-400: #61dafb;
+  --blue-800: #0a61ae;
+}
+
+/* #menu{
+    margin: 45px 95px 0px 95px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+#menu .logo{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding-bottom: 20px;
+    justify-content: flex-start;
+}
+
+
+
+#menu .logo img{
+    width: 4em;
+    height: 4em;
+    
+}
+
+#menu .logo h3{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#menu .navigation{
+    padding-bottom: 0px;
+}
+
+#menu .navigation ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4em;
+}
+
+.navigation ul li{
+    list-style: none;
+}
+
+.navigation ul li a{
+    text-decoration: none;
+    font-size: 22px;
+    color:#000;
+    
+}
+
+.navigation ul li:last-child a{
+    background: rgb(30, 144, 255);
+    color: white;
+    padding: 14px 30px;
+    border-radius: 0.5em;
+    text-align: center;
+}
+
+
+#Portfolio-descr{
+    display: flex;
+    justify-content: space-between;
+    margin: 45px 95px 0px 95px;
+    gap: 2em;
+}
+
+#Portfolio-descr .content{
+    flex: 1;
+    background: rgba(135, 207, 235, 0.326);
+    padding:30px 0 30px 30px; 
+    border-radius: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.content p{
+    font-size: 1.4em;
+    width: 30em;
+}
+
+.content span{
+    font-size: 3em;
+}
+
+.content h2{
+    font-size: 4em;
+}
+
+.content p{
+    margin-top: 0.5em;
+}
+
+.content .btns, .logo{
+    margin-top: 2em;
+}
+
+.content .btns a{
+ list-style: none;
+ text-decoration: none;
+ padding: 12px 35px;
+ border-radius:0.5em;
+ font-size: 20px;
+}
+
+.btns a:first-child{
+ background: #000;
+ color: #fff;
+ 
+}
+
+.btns a:nth-child(2){
+ background: #fff;
+ color: #000;
+}
+
+#Portfolio-descr .profile-pic{
+    background:yellow;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 30px;
+    border-radius: 30px;
+    max-width: 100%;
+}
+
+#Portfolio-descr .profile-pic img{
+    margin-top: -60px;
+    max-width: 420px;
+    margin-bottom: -10px;
+    align-items: center;
+    
+}
+
+.logos{
+    background:var(--base-100);
+    border-radius: 30px;
+    margin: 45px 95px 0px 95px;
+    padding: 30px 0;
+} */
+
+.marquee {
+  width: 100vw;
+  max-width: 100%;
+  height: 128px;
+  overflow: hidden;
+  position: relative;
+}
+
+.track {
+  position: absolute;
+  white-space: no-wrap;
+  will-change: transform;
+  animation: marquee 40s linear infinite;
+  display: flex;
+  gap: 10px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  #Portfolio-descr {
+    margin: 30px 30px 30px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #Portfolio-descr .content {
+    background: var(--blue-100);
+    width: 100%;
+    padding: 35px 30px;
+    border-radius: 30px;
+    /* display: flex;
+       flex-direction: column;
+       justify-content: flex-start;   */
+  }
+
+  .content small {
+    font-size: 30px;
+  }
+
+  .content h2 {
+    font-size: 3rem;
+    line-height: 1em;
+  }
+
+  .content span {
+    display: none;
+  }
+
+  .content .description p {
+    font-size: 1.2em;
+    margin-top: 0.5em;
+  }
+
+  .content .btns {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    gap: 0.5em;
+  }
+
+  .btns a {
+    text-decoration: none;
+    list-style: none;
+  }
+
+  .btns a:first-child {
+    width: 70%;
+    background: var(--base-800);
+    color: #fff;
+    padding: 11px 30px;
+    text-wrap: nowrap;
+    border-radius: 0.5em;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .btns a:nth-child(2) {
+    width: 60%;
+    color: var(--base-800);
+    background: #fff;
+    border-radius: 0.5em;
+    text-align: center;
+    padding: 11px 30px;
+    font-size: 18px;
+    text-wrap: nowrap;
+  }
+
+  #Portfolio-descr .logo {
+    margin-top: 0.5em;
+  }
+
+  #Portfolio-descr .profile-pic {
+    background: var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    border-radius: 30px;
+  }
+
+  .profile-pic img {
+    width: 80%;
+    margin-top: -4em;
+  }
+
+  .logos {
+    background: var(--base-100);
+    /* border-radius: 30px;
+    margin: 45px 95px 0px 95px; */
+    padding: 30px 0;
+  }
+
+  .marquee {
+    width: 100vw;
+    max-width: 100%;
+    height: 128px;
+    overflow: hidden;
+    position: relative;
+  }
+  .track {
+    position: absolute;
+    white-space: no-wrap;
+    will-change: transform;
+    animation: marquee 40s linear infinite;
+    display: flex;
+    gap: 10px;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  #skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 30px 30px 35px;
+  }
+
+  #skills .about {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  #skills h2 {
+    font-size: 42px;
+    text-align: center;
+  }
+
+  .content {
+    margin-top: 1.5em;
+    background: var(--blue-100);
+    padding: 45px 30px;
+    border-radius: 1.4em;
+  }
+
+  .content .list ul {
+    margin-top: 0.6em;
+  }
+  .content .list ul li {
+    list-style: none;
+    background-color: var(--blue-400);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+  }
+
+  .list .tutor {
+    margin-top: 0.8em;
+  }
+
+  .content .description {
+    margin-top: 0.9em;
+  }
+
+  .content h3 {
+    font-size: 1.5em;
+  }
+
+  #Work-exp .title {
+    margin: 30px 30px 0px 35px;
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container .box {
+    background: var(--yellow-100);
+    padding: 45px 30px;
+    border-radius: 1em;
+    margin: 30px 30px 8px 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease 0.3s all;
+  }
+
+ 
+  .container .box img {
+    width: 25em;
+    height: 10em;
+    border-radius: 1em;
+    margin:  30px 30px 30px 35px; 
+    max-width: 100%; 
+   
+  } 
+
+  figure {
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      object-fit: cover;
+      transition: ease 3s all;
+    }
+    figcaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: var(--base-100);
+      text-align: center;
+      padding: 10px;
+      opacity: 0;
+      visibility: hidden;
+      transition: ease 0.3s all;
+    }
+
+    &:hover {
+      figcaption {
+        opacity: 1;
+        visibility: visible;
+      }
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .write-up {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .box .write-up h3 {
+    font-size: 2em;
+  }
+
+  .box .write-up h4,
+  p {
+    font-size: 1.3em;
+  }
+  .completed-project .title{
+    margin: 30px 30px 0px 35px;
+    text-align: center;
+  }
+
+ .bento-grid{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+
+ }
+
+ .bento-grid a img{
+  border-radius: 1em;
+  height: 15em;
+  width: 30em;
+  object-fit: cover;
+  margin: 15px 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+}
