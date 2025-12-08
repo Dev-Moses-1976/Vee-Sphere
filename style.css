@@ -194,8 +194,90 @@
     overflow-x: hidden;
   }
 
+  header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--base-100);
+    padding: 20px 30px;
+    
+  }
+
+  header a{
+    text-decoration: none;
+    list-style: none;
+    gap: 0.5em;
+  }
+
+  .logo-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+
+  }
+  .logo{
+    display: flex;
+    background: var(--base-800);
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--base-100);
+  }
+
+  .logo-text{
+    color: var(--base-800);
+    font-size: 20px;
+    font-weight: 600;
+    
+  }
+
+  nav #menu{
+    display: none;
+   
+   
+    
+    &.active{
+      display:flex;
+      flex-direction: column;
+      gap: 1.5em;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2em;
+  
+    }
+  }
+
+
+  #menu li{
+    list-style: none;
+  }
+
+  #menu li a{
+    text-decoration: none;
+    color: var(--base-400);
+    font-size: 20px;
+  }
+
+ #menu li .button{
+  background: var(--blue);
+  color: var(--base-100);
+  padding: 10px 25px;
+  border-radius: 0.5em;
+  display: block;
+  width: 18em;
+  text-align: center;
+  
+ }
+
+
   #Portfolio-descr {
-    margin: 30px 30px 30px 35px;
+   margin: 30px 33px 30px 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -204,12 +286,9 @@
 
   #Portfolio-descr .content {
     background: var(--blue-100);
-    width: 100%;
-    padding: 35px 30px;
+    padding: 31px 35px;
     border-radius: 30px;
-    /* display: flex;
-       flex-direction: column;
-       justify-content: flex-start;   */
+    width: 20.5;
   }
 
   .content small {
@@ -264,7 +343,7 @@
     text-wrap: nowrap;
   }
 
-  #Portfolio-descr .logo {
+  #Portfolio-descr .logo-img {
     margin-top: 0.5em;
   }
 
@@ -275,17 +354,19 @@
     justify-content: center;
     margin-top: 2em;
     border-radius: 30px;
+    width: 20.5em;
+    height: 17em;
   }
 
   .profile-pic img {
     width: 80%;
-    margin-top: -4em;
+    margin-top: -5em;
+    margin-bottom: -1.5em;
+   
   }
 
-  .logos {
+  .logos-container {
     background: var(--base-100);
-    /* border-radius: 30px;
-    margin: 45px 95px 0px 95px; */
     padding: 30px 0;
   }
 
@@ -319,7 +400,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 30px 30px 30px 35px;
+    margin: 30px 33px 30px 35px;
   }
 
   #skills .about {
@@ -335,7 +416,8 @@
   .content {
     margin-top: 1.5em;
     background: var(--blue-100);
-    padding: 45px 30px;
+    padding: 31px 35px;
+    width: 20.5em;
     border-radius: 1.4em;
   }
 
@@ -379,8 +461,9 @@
   .container .box {
     background: var(--yellow-100);
     padding: 45px 30px;
+    width: 20.5em;
     border-radius: 1em;
-    margin: 30px 30px 8px 35px;
+    margin: 30px 34px 8px 35px;
     display: flex;
     flex-direction: column;
     gap: 2em;
@@ -395,7 +478,6 @@
     width: 25em;
     height: 10em;
     border-radius: 1em;
-    margin:  30px 30px 30px 35px; 
     max-width: 100%; 
    
   } 
@@ -465,17 +547,20 @@
   justify-content: center;
   gap: 0.5em;
   overflow-x: hidden;
-
+  transition: ease 0.3s all;
  }
 
  .bento-grid a img{
   border-radius: 1em;
   height: 15em;
   width: 20em;
-  object-fit: cover;
   margin: 15px 45px;
+  object-fit: cover;
   display: flex;
   align-items: center;
   justify-content: center;
+
  }
+
+ 
 }
